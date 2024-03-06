@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Add Task</title>
+	<style>
+    	body {
+      	font-size: 10pt;
+      	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+      	color: #700707;
+      	line-height: 14pt;
+      	padding-left: 5pt;
+      	padding-right: 5pt;
+      	padding-top: 5pt;
+    	}
+    	button {
+      	background-color: #4CAF50; /* Green */
+      	border: none;
+      	color: white;
+      	padding: 15px 32px;
+      	text-align: center;
+      	text-decoration: none;
+      	display: inline-block;
+      	font-size: 16px;
+ 	   }
+	</style>
+  </head>
+  <body>
+	<form
+  	method="POST"
+  	action="http://ec2-3-87-236-8.compute-1.amazonaws.com/phpinfo.php"
+	>
+  	<fieldset>
+    	<legend>Application Info</legend>
+    	<label for="firstNameID">FirstName</label>
+        <input type="text" name="firstName" id="firstNameID" autofocus />
+    	<br />
+    	<label for="lastNameID">LastName</label>
+    	<input type="text" name="lastName" id="lastNameID" />
+    	<br />
+    	<label for="specialInstructions">Why are you a good fit for this position?</label>
+    	<br />
+      	Do you Love donuts? Yes
+    	<input type="radio" name="loveDonuts" value="Y" /> No
+    	<input type="radio" name="loveDonuts" value="N" />
+    	<br />
+    	Which Donut is your favorite?
+    	<select name="whichDonut">
+      	<option>Apple Fritter</option>
+      	<option>Chocolate</option>
+      	<option>Glazed</option>
+    	</select>
+    	<br />
+    	<button type="reset">Reset</button>
+    	<button type="submit">Submit</button>
+  	</fieldset>
+	</form>
+ 
+  </body>
+</html>
