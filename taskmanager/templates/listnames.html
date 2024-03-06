@@ -6,7 +6,9 @@
 <body>
 	<h2>Names</h2>
 	{% for name in names %}
-	- {{name.first_name}} {{name.last_name}}<br>
+	- {{name.first_name}} {{name.last_name}}
+	<a href="{% url 'editname' iNameID=name.id %}">Edit</a>
+	<a href="{% url 'deletename' iNameID=name.id %}">Delete</a><br>
 	{% endfor %}
 </body>
 </html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Edit Name</title>
+</head>
+<body>
+   <h3>Edit Name</h3>
+   <form method="post" action="{% url 'editname' iNameID=name.id %}">
+       {% csrf_token %}
+       First Name: <input type="text" name="firstname" value="{{ name.first_name}}"><br>
+       Last Name: <input type="text" name="lastname" value="{{ name.last_name}}"><br>
+       <button type="submit">Edit Name</button>
+   </form>
+</body>
+</html>
