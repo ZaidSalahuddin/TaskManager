@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Name
 
 # Create your views here.
@@ -19,3 +19,19 @@ def listNamesPageView(request) :
 
 def addNamePageView(request) :
    return render(request, "addname.html")
+
+def editNamePageView(request, iNameID) :
+   name = Name.objects.get(id=iNameID)
+   # if updating from from post, do this if statement
+   if request.method == 'POST':
+       # put the update code here, then redirect to view.
+       name.first_name = request.POST.get("firstname")
+       name.last_name = request.POST.get("lastname")
+       name.save()
+       #redirect to display veterinarian page if this was an update
+       return redirect(listNamesPageView)
+
+   context = {
+       "name": name
+   }
+   return render(request, "editname.html", context)

@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import formPageView, listNamesPageView, addNamePageView
+from .views import *
 
 urlpatterns = [
     path("", formPageView, name="form"),
     path("listnames", listNamesPageView, name="names"),
-    path("addnames", addNamePageView, name="addname")
+    path("addnames", addNamePageView, name="addname"),
+    path("editname/<int:iNameID>", editNamePageView, name="editname")
 ]
