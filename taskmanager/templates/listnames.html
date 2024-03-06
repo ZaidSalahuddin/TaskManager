@@ -8,7 +8,7 @@
 	{% for name in names %}
 	- {{name.first_name}} {{name.last_name}}
 	<a href="{% url 'editname' iNameID=name.id %}">Edit</a>
-	Delete<br>
+	<a href="{% url 'deletename' iNameID=name.id %}">Delete</a><br>
 	{% endfor %}
 </body>
 </html>

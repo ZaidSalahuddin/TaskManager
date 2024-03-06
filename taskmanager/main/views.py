@@ -20,6 +20,10 @@ def listNamesPageView(request) :
 def addNamePageView(request) :
    return render(request, "addname.html")
 
+def deleteNamePageView(request, iNameID):
+    Name.objects.get(id=iNameID).delete()
+    return redirect(listNamesPageView)
+
 def editNamePageView(request, iNameID) :
    name = Name.objects.get(id=iNameID)
    # if updating from from post, do this if statement
