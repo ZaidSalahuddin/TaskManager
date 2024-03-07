@@ -12,17 +12,17 @@ def listTasksPageView(request) :
     
     data = Task.objects.all()
     context = {"names": data}
-    return render(request, "listnames.html", context)
+    return render(request, "listtasks.html", context)
 
-def addNamePageView(request) :
-   return render(request, "login.html")
+def addTaskPageView(request) :
+   return render(request, "addtask.html")
 
-def deleteNamePageView(request, iNameID):
-    Task.objects.get(id=iNameID).delete()
+def deleteTaskPageView(request, iTaskID):
+    Task.objects.get(id=iTaskID).delete()
     return redirect(listTasksPageView)
 
-def editNamePageView(request, iNameID) :
-   name = Task.objects.get(id=iNameID)
+def editTaskPageView(request, iTaskID) :
+   name = Task.objects.get(id=iTaskID)
    # if updating from from post, do this if statement
    if request.method == 'POST':
        # put the update code here, then redirect to view.
@@ -35,4 +35,4 @@ def editNamePageView(request, iNameID) :
    context = {
        "name": name
    }
-   return render(request, "editname.html", context)
+   return render(request, "edittask.html", context)

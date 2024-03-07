@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Add Task</title>
+</head>
+<body>
+   <h3>Add Task</h3>
+   <form method="post" action="{% url 'tasks' %}">
+       {% csrf_token %}
+       Task Name: <input type="text" name="Name"><br>
+       Description: <input type="text" name="Description"><br>
+       <button type="submit">Add Task</button>
+   </form>
+</body>
+</html>
+
+docker run --name taskdb -e POSTGRES_PASSWORD=Password1 -d -v `pwd`/db:/var/lib/postgresql/data postgres
