@@ -2,9 +2,6 @@ from django.shortcuts import render, redirect
 from .models import Task
 
 # Create your views here.
-def formPageView(request):
-    return render(request, "form.html")
-
 def listTasksPageView(request) :
      
     if request.method == 'POST':
