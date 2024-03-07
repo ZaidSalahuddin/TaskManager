@@ -18,7 +18,7 @@ def listNamesPageView(request) :
     return render(request, "listnames.html", context)
 
 def addNamePageView(request) :
-   return render(request, "addname.html")
+   return render(request, "login.html")
 
 def deleteNamePageView(request, iNameID):
     Name.objects.get(id=iNameID).delete()
