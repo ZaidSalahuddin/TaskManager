@@ -10,7 +10,7 @@ def listTasksPageView(request) :
     if request.method == 'POST':
         new_task = Task()
         new_task.name = request.POST.get("name")
-        new_task.description = request.POST.get("descro[topms]")
+        new_task.description = request.POST.get("description")
         new_task.save()
     
     data = Task.objects.all()
