@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tasks</title>
+</head>
+<body>
+	<h2>Tasks</h2>
+	{% for task in tasks %}
+	- {{task.name}} {{task.description}}
+	<a href="{% url 'editname' iTaskID=task.id %}">Edit</a>
+	<a href="{% url 'deletename' iTaskID=task.id %}">Delete</a><br>
+	{% endfor %}
+</body>
+</html>
