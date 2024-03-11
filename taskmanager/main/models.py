@@ -12,9 +12,9 @@ class Task(models.Model):
 
 
 class Name(models.Model):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
-    contact = models.IntegerField(default=0)
+    task = models.CharField(max_length=30)
+    description = models.CharField(max_length=30)
+    time_to_complete = models.IntegerField(default=0)
 
 
     def __str__(self):
