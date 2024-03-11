@@ -2,8 +2,6 @@ from django.shortcuts import render, redirect
 from .models import Name
 
 # Create your views here.
-def formPageView(request):
-    return render(request, "form.html")
 
 def listNamesPageView(request) :
      
