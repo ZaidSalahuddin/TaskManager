@@ -6,10 +6,10 @@ from .models import Name
 def listNamesPageView(request) :
      
     if request.method == 'POST':
-        new_vet = Name()
-        new_vet.first_name = request.POST.get("firstname")
-        new_vet.last_name = request.POST.get("lastname")
-        new_vet.save()
+        new_name = Name()
+        new_name.first_name = request.POST.get("firstname")
+        new_name.last_name = request.POST.get("lastname")
+        new_name.save()
     
     data = Name.objects.all()
     context = {"names": data}
