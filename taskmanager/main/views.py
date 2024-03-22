@@ -30,7 +30,7 @@ def editNamePageView(request, iNameID) :
        name.first_name = request.POST.get("firstname")
        name.last_name = request.POST.get("lastname")
        name.save()
-       #redirect to display veterinarian page if this was an update
+       #redirect to display task page if this was an update
        return redirect(listNamesPageView)
 
    context = {
