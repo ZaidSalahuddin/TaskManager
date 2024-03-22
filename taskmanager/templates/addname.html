@@ -7,9 +7,9 @@
    <h3>Add Task</h3>
    <form method="post" action="{% url 'names' %}">
        {% csrf_token %}
-       First Name: <input type="text" name="firstname"><br>
-       Last Name: <input type="text" name="lastname"><br>
-       Hours to Complete: <input type="number" name="time"><br>
+       Task: <input type="text" name="firstname"><br>
+       Description: <input type="text" name="lastname"><br>
+       Due By: <input type="date" name="time"><br>
        <a href=""><button>Cancel</button></a>
        <button type="submit">Add Task</button>
    </form>

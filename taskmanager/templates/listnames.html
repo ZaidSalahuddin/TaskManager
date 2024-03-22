@@ -8,7 +8,7 @@
 	{% for name in names %} <br>
 	Task: {{name.task}} <br> 
 	Description: {{name.description}} <br> 
-	Hours To Complete: {{name.time_to_complete}} <br>
+	Due By: {{name.time_to_complete}} <br>
 	<a href="{% url 'editname' iNameID=name.id %}"><button>Edit</button></a>
 	<a href="{% url 'deletename' iNameID=name.id %}"><button>Delete</button></a> <br>
 	_______________________________________
