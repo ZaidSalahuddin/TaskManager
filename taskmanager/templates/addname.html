@@ -5,11 +5,16 @@
 </head>
 <body>
    <h3>Add Task</h3>
-   <form method="post" action="{% url 'names' %}">
+   <form method="post" action="{% url 'addname' %}">
        {% csrf_token %}
+<<<<<<< HEAD
        First Name: <input type="text" name="firstname"><br>
        Last Name: <input type="text" name="lastname"><br>
        <a href="">,<button>Cancel</button></a>
+=======
+       Task Name: <input type="text" name="firstname"><br>
+       Task description: <input type="text" name="lastname"><br>
+>>>>>>> e4a2a7343fe738e07ff3fe639fdd91a8f1eb866f
        <button type="submit">Add Task</button>
    </form>
 </body>

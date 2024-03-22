@@ -6,10 +6,10 @@ from .models import Name
 def listNamesPageView(request) :
      
     if request.method == 'POST':
-        new_vet = Name()
-        new_vet.first_name = request.POST.get("firstname")
-        new_vet.last_name = request.POST.get("lastname")
-        new_vet.save()
+        new_name = Name()
+        new_name.first_name = request.POST.get("firstname")
+        new_name.last_name = request.POST.get("lastname")
+        new_name.save()
     
     data = Name.objects.all()
     context = {"names": data}
@@ -30,7 +30,7 @@ def editNamePageView(request, iNameID) :
        name.first_name = request.POST.get("firstname")
        name.last_name = request.POST.get("lastname")
        name.save()
-       #redirect to display veterinarian page if this was an update
+       #redirect to display task page if this was an update
        return redirect(listNamesPageView)
 
    context = {
