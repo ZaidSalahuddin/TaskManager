@@ -9,6 +9,7 @@
        {% csrf_token %}
        Task Name: <input type="text" name="firstname" value="{{ name.first_name}}"><br>
        Task Description: <input type="text" name="lastname" value="{{ name.last_name}}"><br>
+       Hours to Complete: <input type="number" name="time" value="{{ name.time_to_complete}}"><br>
        <button href="">Cancel</button>
        <button type="submit">Edit Task</button>
    </form>
