@@ -7,10 +7,9 @@
    <h3>Add Task</h3>
    <form method="post" action="{% url 'names' %}">
        {% csrf_token %}
-       Task: <input type="text" name="firstname"><br>
-       Description: <input type="text" name="lastname"><br>
+       Task: <input type="text" placeholder="Task Name" name="firstname"><br>
+       Description: <input type="text" placeholder="Task Description" name="lastname"><br>
        Due By: <input type="date" name="time"><br>
-       <a href=""><button>Cancel</button></a>
        <button type="submit">Add Task</button>
    </form>
 </body>

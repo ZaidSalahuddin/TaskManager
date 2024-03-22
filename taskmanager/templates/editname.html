@@ -7,10 +7,9 @@
    <h3>Edit Task</h3>
    <form method="post" action="{% url 'editname' iNameID=name.id %}">
        {% csrf_token %}
-       Task: <input type="text" name="firstname" value="{{ name.first_name}}"><br>
-       Description: <input type="text" name="lastname" value="{{ name.last_name}}"><br>
+       Task: <input type="text" name="firstname" placeholder="New Name" value="{{ name.first_name}}"><br>
+       Description: <input type="text" name="lastname" placeholder="New Description" value="{{ name.last_name}}"><br>
        Due By: <input type="date" name="time" value="{{ name.time_to_complete}}"><br>
-       <button href="">Cancel</button>
        <button type="submit">Edit Task</button>
    </form>
 </body>
