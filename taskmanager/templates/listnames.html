@@ -6,10 +6,15 @@
 <body>
 	<h2>Tasks</h2>
 	{% for name in names %}
-	- {{name.task}} {{name.description}} {{name.time_to_complete}}
+	<br>
+	Task: {{name.task}} 
+	<br> Description: {{name.description}} 
+	<br> Hours To Complete: {{name.time_to_complete}}
 	<a href="{% url 'editname' iNameID=name.id %}">Edit</a>
 	<a href="{% url 'deletename' iNameID=name.id %}">Delete</a><br>
+	_______________________________________
 	{% endfor %}
+	<br>
 	<a href="/addnames">Add Name</a>
 </body>
 </html>
