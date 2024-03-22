@@ -25,14 +25,11 @@ def deleteNamePageView(request, iNameID):
 
 def editNamePageView(request, iNameID) :
    name = Name.objects.get(id=iNameID)
-   # if updating from from post, do this if statement
    if request.method == 'POST':
-       # put the update code here, then redirect to view.
        name.task = request.POST.get("firstname")
        name.description = request.POST.get("lastname")
        name.time_to_complete = request.POST.get("time")
        name.save()
-       #redirect to display task page if this was an update
        return redirect(listNamesPageView)
 
    context = {
